@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		#box,#box1{
+			width: 903px;
+			height: 116px;
+			margin: 100px auto;
+			background: url(images/22.gif);
+			position: relative;
+		}
+		.left,.right,.left1,.right1{width:40px;height:50px;position: absolute;top:25px; background: red;opacity: 0.7;line-height: 50px;text-align: center;cursor: pointer;color: #fff;}
+		.slider,.slider1{
+			width: 744px;
+			height: 50px;
+			margin-left: 85px;
+			padding-top: 33px;
+			overflow: hidden;
+		}
+		.slider li,.slider1 li{
+			width: 110px;
+			height: 50px;
+			float: left;
+			padding-right: 14px;
+			list-style: none;
+		}
+		.left,.left1{left:20px;}
+		.right,.right1{right:20px;}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="slider">
+			<ul>
+				<li><img src="images/1.gif"></li>
+				<li><img src="images/2.gif"></li>
+				<li><img src="images/3.gif"></li>
+				<li><img src="images/4.gif"></li>
+				<li><img src="images/5.gif"></li>
+				<li><img src="images/6.gif"></li>
+				<li><img src="images/7.jpg"></li>
+				<li><img src="images/8.jpg"></li>
+				<li><img src="images/1.gif"></li>
+				<li><img src="images/2.gif"></li>
+				<li><img src="images/3.gif"></li>
+			</ul>
+		</div>
+		<div class="left">&lt;</div>
+		<div class="right">&gt;</div>
+	</div>
+
+	<div id="box1">
+		<div class="slider1">
+			<ul>
+				<li><img src="images/1.gif"></li>
+				<li><img src="images/2.gif"></li>
+				<li><img src="images/3.gif"></li>
+				<li><img src="images/4.gif"></li>
+				<li><img src="images/5.gif"></li>
+				<li><img src="images/6.gif"></li>
+				<li><img src="images/7.jpg"></li>
+				<li><img src="images/8.jpg"></li>
+				<li><img src="images/1.gif"></li>
+				<li><img src="images/2.gif"></li>
+				<li><img src="images/3.gif"></li>
+			</ul>
+		</div>
+		<div class="left1">&lt;</div>
+		<div class="right1">&gt;</div>
+	</div>
+<script src="jquery1.7.js"></script>
+<script src="script.js"></script>
+<script>
+	$(function(){
+		$("#box").slider({
+			count:1,
+			speed:1000,
+			type:"click",
+			prev:".left",
+			next:".right"
+		})
+		
+		$("#box1").slider({
+			count:4,
+			speed:1500,
+			type:"mouseover",
+			prev:".left1",
+			next:".right1"
+		})
+		
+	})
+</script>
+</body>
+</html>
